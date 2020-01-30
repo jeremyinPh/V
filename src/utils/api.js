@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {Message} from 'element-ui';
-import router from '../router'
+import router from '../router/router'
 
 // 添加响应连接器
 axios.interceptors.response.use(success => {
