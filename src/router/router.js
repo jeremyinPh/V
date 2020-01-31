@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 // 1. 定义 (路由) 组件。
 // 可以从其他文件 import 进来
+import Login from '../views/Login';
 import Home from '../views/Home.vue';
 import About from '../views/About';
 
@@ -19,6 +20,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
+    name: 'login',
+    component: Login,
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home,
   },
