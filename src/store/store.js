@@ -13,7 +13,7 @@ export default new Vuex.Store({
   mutations: {
     initRoutes(state, data) {
       state.routes = data;
-    }
+    },
   },
   /** 类似于mutation  不同的是action提交的不是直接修改状态 state  可以包含任意异步操作
    这个context对象 拥有和store实例一样的方法和属性  但是这个context不是store实例本身   想异步  后台程序的意思   通过分发来触发  dispatch
@@ -40,7 +40,7 @@ export default new Vuex.Store({
         });
       }, error => {
 
-      });*/
+      }); */
     },
   },
   modules: {},

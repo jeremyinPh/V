@@ -7,12 +7,12 @@
 
 
 <script>
-  export default {
-    name: 'about',
-    methods:{
-      clickMe(){
-        this.$router.replace("/");
-      }
-    }
-  }
+export default {
+  name: 'about',
+  methods: {
+    clickMe() {
+      this.$router.replace('/');
+    },
+  },
+};
 </script>

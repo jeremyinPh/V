@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 // 2. 定义路由
 // 每个路由应该映射一个组件。 其中"component" 可以是通过 Vue.extend() 创建的组件构造器，
 // 或者，只是一个组件配置对象
-/***  如何调用?
+/** *  如何调用?
  *    this.$router.replace((path == '/' || path == undefined) ? '/' : path);
  *    this.$router.push("/about");
  */
@@ -20,29 +20,29 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
   },
   {
     path: '/about',
     name: 'about',
-    component: About
+    component: About,
   },
   {
     path: '/test',
     name: 'test',
     component: About,
-    hidden:true,
-    meta:{  // 配置meta   用于全局前置守卫  检查  然后根据不同值 跳到不同地方
-      roles:['admin','user']
+    hidden: true,
+    meta: { // 配置meta   用于全局前置守卫  检查  然后根据不同值 跳到不同地方
+      roles: ['admin', 'user'],
     },
-    children:[    // 子页面 嵌套路由   /test/chat
+    children: [ // 子页面 嵌套路由   /test/chat
       {
         path: '/chat',
         name: '在线聊天',
         component: Home,
-        hidden:true
-      }
-    ]
+        hidden: true,
+      },
+    ],
   },
 ];
 
@@ -51,5 +51,5 @@ const router = new VueRouter({
   routes,
 });
 
-//暴露出去
+// 暴露出去
 export default router;

@@ -14,5 +14,15 @@ export default {
   components: {
     HelloWorld,
   },
+  computed: { // 计算属性
+    routes() {
+      return this.$store.state.routes;
+    },
+  },
+  methods: {
+    gochat() {
+      this.$router.push('/chat');
+    },
+  },
 };
 </script>
