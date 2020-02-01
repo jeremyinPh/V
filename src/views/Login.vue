@@ -1,40 +1,42 @@
 <template>
-  <div class="loginContainer">
-    <el-form
-      ref="loginForm"
-      :model="loginForm"
-      :rules="rules"
-      v-loading="loading"
-      element-loading-text="loading..."
-      element-loading-spinner="el-icon-loading"
-      element-loading-background="rgba(0, 0, 0, 0.8)"
-      label-width="80px"
-      class="demo-ruleForm">
+  <div>
+    <div class="loginContainer">
+      <el-form
+        ref="loginForm"
+        :model="loginForm"
+        :rules="rules"
+        v-loading="loading"
+        element-loading-text="loading..."
+        element-loading-spinner="el-icon-loading"
+        element-loading-background="rgba(0, 0, 0, 0.8)"
+        label-width="80px"
+        class="demo-ruleForm">
 
-      <el-form-item label="Account" prop="account">
-        <el-input v-model="loginForm.account" placeholder="  input your account"></el-input>
-      </el-form-item>
+        <el-form-item label="Account" prop="account" class="white_label">
+          <el-input v-model="loginForm.account" placeholder="  input your account"></el-input>
+        </el-form-item>
 
-      <el-form-item label="Password" prop="password">
-        <el-input type="password" v-model="loginForm.password"
-                  placeholder="  input your password"
-                  @keydown.enter.native="submitLogin('loginForm')"></el-input>
-      </el-form-item>
+        <el-form-item label="Password" prop="password" class="white_label">
+          <el-input type="password" v-model="loginForm.password"
+                    placeholder="  input your password"
+                    @keydown.enter.native="submitLogin('loginForm')"></el-input>
+        </el-form-item>
 
-      <el-button size="normal" type="primary" style="width: 100%; margin-top: 10px; "
-                 @click="submitLogin('loginForm')">Login
-      </el-button>
+        <el-button size="normal" type="primary" style="width: 100%; margin-top: 10px; "
+                   @click="submitLogin('loginForm')">Login
+        </el-button>
 
-      <el-link type="primary" :underline="false" @click="submitRegister"
-               style="width: 50%; text-align: left; margin-top: 10px; ">register
-      </el-link>
+        <el-link type="primary" :underline="false" @click="submitRegister"
+                 style="width: 50%; text-align: left; margin-top: 10px; ">register
+        </el-link>
 
-      <el-link type="warning" :underline="false" @click="submitForgetPwd"
-               style="width: 50%; alignment: right; margin-top: 10px; ">
-        forget password
-      </el-link>
+        <el-link type="warning" :underline="false" @click="submitForgetPwd"
+                 style="width: 50%; alignment: right; margin-top: 10px; ">
+          forget password
+        </el-link>
 
-    </el-form>
+      </el-form>
+    </div>
   </div>
 </template>
 
@@ -83,7 +85,7 @@
         alert('forget your password? no way');
       },
       submitRegister() {
-        alert('forget your password? no way');
+        this.$message('just input account and password, then click register again.');
       },
       submitLogin(loginForm) {
         this.$refs[loginForm].validate((valid) => {
@@ -101,13 +103,19 @@
 
 
 <style>
+
+  .white_label .el-form-item__label {
+    color: whitesmoke;
+  }
+
   .loginContainer {
     width: 350px;
-    margin: 280px auto;
+    margin: 0px auto;
   }
 
   .loginRemember {
     text-align: left;
     margin: 0px 0px 15px 0px;
   }
+
 </style>
