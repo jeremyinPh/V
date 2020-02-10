@@ -1,43 +1,66 @@
 <template>
-  <div>
-    <div class="loginContainer">
-      <el-form
-        ref="loginForm"
-        :model="loginForm"
-        :rules="rules"
-        v-loading="loading"
-        element-loading-text="loading..."
-        element-loading-spinner="el-icon-loading"
-        element-loading-background="rgba(0, 0, 0, 0.8)"
-        label-width="80px"
-        class="demo-ruleForm">
 
-        <el-form-item label="Account" prop="account" class="white_label">
-          <el-input v-model="loginForm.account" placeholder="  input your account"></el-input>
-        </el-form-item>
+  <div class="navigationWrapper">
+    <div class="content">
+      <div class="content_container">
+        <video class="bg_video" autoplay="" loop="loop" muted="">
+          <source src="../assets/images/bg.mp4" type="video/mp4">
+        </video>
+        <div class="content_left">
 
-        <el-form-item label="Password" prop="password" class="white_label">
-          <el-input type="password" v-model="loginForm.password"
-                    placeholder="  input your password" maxlength="16"
-                    @keydown.enter.native="submitLogin('loginForm')"></el-input>
-        </el-form-item>
+          <img src="../assets/images/gerrard.png" alt="杰拉德">
+        </div>
+        <div class="content_right">
 
-        <el-button size="normal" type="primary" style="width: 100%; margin-top: 10px; "
-                   @click="submitLogin('loginForm')">Login
-        </el-button>
 
-        <el-link type="primary" :underline="false" @click="submitRegister"
-                 style="width: 50%; text-align: left; margin-top: 10px; ">register
-        </el-link>
+          <div>
+            <div class="loginContainer">
+              <el-form
+                ref="loginForm"
+                :model="loginForm"
+                :rules="rules"
+                v-loading="loading"
+                element-loading-text="loading..."
+                element-loading-spinner="el-icon-loading"
+                element-loading-background="rgba(0, 0, 0, 0.8)"
+                label-width="80px"
+                class="demo-ruleForm">
 
-        <el-link type="warning" :underline="false" @click="submitForgetPwd"
-                 style="width: 50%; alignment: right; margin-top: 10px; ">
-          forget password
-        </el-link>
+                <el-form-item label="Account" prop="account" class="white_label">
+                  <el-input v-model="loginForm.account"
+                            placeholder="  input your account"></el-input>
+                </el-form-item>
 
-      </el-form>
+                <el-form-item label="Password" prop="password" class="white_label">
+                  <el-input type="password" v-model="loginForm.password"
+                            placeholder="  input your password" maxlength="16"
+                            @keydown.enter.native="submitLogin('loginForm')"></el-input>
+                </el-form-item>
+
+                <el-button size="normal" type="primary" style="width: 100%; margin-top: 10px; "
+                           @click="submitLogin('loginForm')">Login
+                </el-button>
+
+                <el-link type="primary" :underline="false" @click="submitRegister"
+                         style="width: 50%; text-align: left; margin-top: 10px; ">register
+                </el-link>
+
+                <el-link type="warning" :underline="false" @click="submitForgetPwd"
+                         style="width: 50%; alignment: right; margin-top: 10px; ">
+                  forget password
+                </el-link>
+
+              </el-form>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
     </div>
   </div>
+
+
 </template>
 
 <script>
