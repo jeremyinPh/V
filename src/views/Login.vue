@@ -18,7 +18,7 @@
 
         <el-form-item label="Password" prop="password" class="white_label">
           <el-input type="password" v-model="loginForm.password"
-                    placeholder="  input your password"
+                    placeholder="  input your password" maxlength="16"
                     @keydown.enter.native="submitLogin('loginForm')"></el-input>
         </el-form-item>
 
@@ -59,7 +59,7 @@
             },
             {
               min: 6,
-              max: 18,
+              max: 16,
               message: 'length between 6 and 18',
               trigger: 'blur'
             }
@@ -90,7 +90,11 @@
       submitLogin(loginForm) {
         this.$refs[loginForm].validate((valid) => {
           if (valid) {
-            alert('submit!  -->' + valid);
+            // alert('submit!  -->' + valid);
+            // 不会向history栈添加一个新纪录  直接替换掉了  所以无法点后退
+            // router.replace(location, onComplete?, onAbort?)
+            let path = this.$route.query.redirect;
+            this.$router.replace((path == '/' || path == undefined) ? '/home' : path);
           } else {
             console.log('error submit!!');
             return false;
