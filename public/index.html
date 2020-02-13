@@ -1,62 +1,36 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>V</title>
+    <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
+    <meta name="description"
+          content="an trade system, include stock, Bulk Stock, Futures contract, Virtual currency, Foreign exchange. hope u like it.">
+    <link rel="stylesheet" href="index.css">
+
 </head>
+<body>
+<div id="container">
+    <video id="background_video" loop muted></video>
+    <div id="video_cover"></div>
+    <div id="overlay"></div>
 
-<body id="dummybodyid">
+    <section id="main_content">
+        <div id="head">
+            <h1>trade system</h1>
+            <p class="sub_head">a trade system that your really want use and analysis it</p>
+            <p class="info">(Keep Going! U ganna find the path to heaven.)</p>
+        </div>
 
-<div id="app"></div>
+        <div id="links">
+            <a href="#">login in</a>
+            <a href="#">come in</a>
+        </div>
+    </section>
+</div>
 
-<noscript>
-    <strong>We're sorry but v doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-</noscript>
+<script src="js/bideo.js"></script>
+<script src="js/main.js"></script>
 
-
-<!--  一个好东西呀    https://cn.tradingview.com/widget/advanced-chart/  -->
-<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-<script type="text/javascript">
-  new TradingView.widget(
-    {
-      'width': 980,
-      'height': 610,
-      'symbol': 'BITSTAMP:BTCUSD',
-      'interval': '240',
-      'timezone': 'Etc/UTC',
-      'theme': 'Dark',
-      'style': '1',
-      'locale': 'zh_CN',
-      'toolbar_bg': '#f1f3f6',
-      'enable_publishing': false,
-      'allow_symbol_change': true,
-      'container_id': 'tradingview_cff2a'
-    }
-  );
-</script>
-
-<script type="text/javascript">
-  new TradingView.widget(
-    {
-      'width': 980,
-      'height': 610,
-      'symbol': 'GOLD',
-      'interval': '240',
-      'timezone': 'Etc/UTC',
-      'theme': 'Dark',
-      'style': '1',
-      'locale': 'zh_CN',
-      'toolbar_bg': '#f1f3f6',
-      'enable_publishing': false,
-      'allow_symbol_change': true,
-      'container_id': 'tradingview_cff2a'
-    }
-  );
-</script>
-<!-- 行情走势图  由tradingview提供  牛逼啊  牛逼   就是不知道流量用了多少 -->
 </body>
 </html>
