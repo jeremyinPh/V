@@ -1,24 +1,11 @@
 # v
 
-## Project setup
 ```
-npm install
-```
+I need do sth to keep my finger dry. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+how about trade help application?
 
-### Compiles and minifies for production
-```
-npm run build
-```
+keep memory of trade
 
-### Lints and fixes files
+good, let's go.
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
