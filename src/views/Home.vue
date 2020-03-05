@@ -1,19 +1,17 @@
 <template>
-  <div class="home">
+  <div id="home_main_content" style="background: blue">
 
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div id="tradingview_85d7b"></div>
+    </div>
+    <!-- TradingView Widget END -->
 
-<!--    &lt;!&ndash; TradingView Widget BEGIN &ndash;&gt;-->
-<!--    <div class="tradingview-widget-container">-->
-<!--      <div id="tradingview_85d7b"></div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; TradingView Widget END &ndash;&gt;-->
-
-<!--    &lt;!&ndash; TradingView Widget BEGIN &ndash;&gt;-->
-<!--    <div class="tradingview-widget-container">-->
-<!--      <div id="tradingview_cff2a"></div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; TradingView Widget END &ndash;&gt;-->
-
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div id="tradingview_cff2a"></div>
+    </div>
+    <!-- TradingView Widget END -->
 
   </div>
 </template>
@@ -29,3 +27,16 @@
     methods: {},
   };
 </script>
+
+<style>
+  #home_main_content {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+
+    /* Vertical center */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+</style>

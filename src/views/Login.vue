@@ -1,6 +1,5 @@
 <template>
   <div id="main_content">
-
     <section>
       <div id="head">
         <el-form
@@ -20,7 +19,6 @@
         <a @click="submitLogin('loginForm')">login in</a>
       </div>
     </section>
-
   </div>
 </template>
 
@@ -36,7 +34,7 @@
         rules: {
           account: [
             {
-              required: true,
+              required: false,
               message: 'please input account',
               trigger: 'blur'
             },
@@ -71,7 +69,6 @@
 
 
 <style>
-
   #main_content {
     z-index: 2;
     position: relative;
@@ -112,7 +109,7 @@
     color: #FFFFFF;
     letter-spacing: 1px;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: none;
     padding: 10px 25px;
     display: inline-block;
     margin-right: 15px;
