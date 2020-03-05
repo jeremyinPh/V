@@ -1,18 +1,7 @@
 <template>
   <div id="home_main_content" style="background: blue">
 
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-      <div id="tradingview_85d7b"></div>
-    </div>
-    <!-- TradingView Widget END -->
-
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-      <div id="tradingview_cff2a"></div>
-    </div>
-    <!-- TradingView Widget END -->
-
+    <h1>Hello World</h1>
   </div>
 </template>
 

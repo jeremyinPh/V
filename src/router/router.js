@@ -21,16 +21,19 @@ const routes = [
   {
     path: '/',
     name: 'login',
+    hidden: true,
     component: Login,
   },
   {
     path: '/home',
     name: 'home',
+    hidden: true,
     component: Home,
   },
   {
     path: '/about',
     name: 'about',
+    hidden: true,
     component: About,
   },
   {
