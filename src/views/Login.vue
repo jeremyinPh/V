@@ -64,6 +64,14 @@
         });
       },
     },
+    beforeCreate() {  // js控制div的显示和隐藏  哎呀妈呀 搞了好久 写最简单的代码  别整那些高难度的
+      document.querySelector('#background_video').style.display = 'block';
+      document.querySelector('#video_cover').style.display = 'block';
+    },
+    beforeDestroy() {
+      document.querySelector('#background_video').style.display = 'none';
+      document.querySelector('#video_cover').style.display = 'none';
+    }
   };
 </script>
 

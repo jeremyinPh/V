@@ -1,8 +1,10 @@
 <template>
-  <div id="home_main_content" style="background: blue">
+  <div style="background: #42b983">
 
-    <h1>Hello World</h1>
+
   </div>
+
+
 </template>
 
 <script>

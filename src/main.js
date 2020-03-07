@@ -6,6 +6,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 import router from './router/router';
 import store from './store/store';
+import '../public/js/bideo'; // 首页视频播放js
+import '../public/js/main'; // 首页视频播放js
 
 // 导入网络请求层
 import {
